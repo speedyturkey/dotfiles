@@ -2,9 +2,8 @@
 	defaultBranch = main
 [user]
 	email = speedyturkey@gmail.com
-	name = billy.mcmonagle
 [core]
-	excludesfile = /Users/william.mcmonagle/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
