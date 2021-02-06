@@ -2,6 +2,7 @@
 	defaultBranch = main
 [user]
 	email = speedyturkey@gmail.com
+	name = Billy McMonagle
 [core]
 	excludesfile = ~/.gitignore_global
 [filter "lfs"]
