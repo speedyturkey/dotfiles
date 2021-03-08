@@ -19,3 +19,4 @@ killall Finder'
 alias please="sudo"
 
 alias k="kubectl"
+alias snowsql="/Applications/SnowSQL.app/Contents/MacOS/snowsql"
