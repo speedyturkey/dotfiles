@@ -3,5 +3,5 @@ export AWS_CHAINED_SESSION_TOKEN_TTL=12h
 export AWS_ASSUME_ROLE_TTL=12h
 export AWS_FEDERATION_TOKEN_TTL=12h
 
-# for flycatcher development
-export FLYCATCHER_LOCAL_MODE=true
+# for redshift development
+export REDSHIFT_DEV_MODE=true
