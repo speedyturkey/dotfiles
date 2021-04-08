@@ -32,5 +32,10 @@ function dockerpush () {
 }
 
 function ssmget() {
-    aws ssm get-parameter --name "$1" | jq -r '.Parameter | .Name + " " + .Value'
+    aws ssm get-parameter --name "$1" --with-decryption --query 'Parameter.Value' --output text
+}
+
+function setfury () {
+    export GEMFURY_TOKEN=$(ssmget /gemfury/token)
+    echo "gemfury token set"
 }
