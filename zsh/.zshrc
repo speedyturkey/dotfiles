@@ -6,3 +6,5 @@ source ~/.zsh/pyenv.zsh
 source ~/.zsh/ruby.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/path.zsh
+source ~/.zsh/poetry.zsh
+
