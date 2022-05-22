@@ -1,5 +1,5 @@
 # use homebrew-installed git
-alias git="/usr/local/bin/git"
+alias git="/opt/homebrew/opt/git/bin/git"
 
 alias ls="exa"
 
