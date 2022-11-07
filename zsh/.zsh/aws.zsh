@@ -1,11 +1,14 @@
-# switching creds with https://github.com/99designs/aws-vault
-# sample usage: `awsrole dev-admin`
+# switching creds with https://github.com/joepurdy/awswitch
+# sample usage: `awsrole dev-arcadia-admin`
 function awsrole() {
-    unset AWS_VAULT
-    eval $(aws-vault exec $1 -- env | grep AWS | sed -e 's/^/export\ /')
+    unset AWS_SWITCH
+    eval $(awsswitch --profile $1 -- env | grep AWS | sed -e 's/^/export\ /')
     export AWS_PROFILE=${1}
     export DEFAULT_AWS_PROFILE=${1}
 }
+
+# enable awswitch shell auto-complete
+eval "$(awswitch --completion-script-zsh)"
 
 # Stax
 function s() {
