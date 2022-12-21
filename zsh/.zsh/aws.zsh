@@ -1,14 +1,15 @@
-# switching creds with https://github.com/joepurdy/awswitch
+# switching creds with https://github.com/ArcadiaPower/axolotl
 # sample usage: `awsrole dev-arcadia-admin`
 function awsrole() {
-    unset AWS_SWITCH
-    eval $(awsswitch --profile $1 -- env | grep AWS | sed -e 's/^/export\ /')
+    unset AWS_AXOLOTL
+    eval $(ax --profile $1 -- env | grep AWS | sed -e 's/^/export\ /')
     export AWS_PROFILE=${1}
     export DEFAULT_AWS_PROFILE=${1}
+    export AWS_DEFAULT_REGION=$AWS_REGION
 }
 
-# enable awswitch shell auto-complete
-eval "$(awswitch --completion-script-zsh)"
+# enable axolotl shell auto-complete
+eval "$(ax --completion-script-zsh)"
 
 # Stax
 function s() {
